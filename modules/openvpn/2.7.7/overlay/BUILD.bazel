@@ -6,16 +6,14 @@ cc_library(
     name = "headers",
     hdrs = [
         "config.h",
+        "include/config.h",
         "include/openvpn-plugin.h",
     ],
     defines = [
         "HAVE_CONFIG_H",
         "_GNU_SOURCE",
     ],
-    includes = [
-        ".",
-        "include",
-    ],
+    includes = ["include"],
     target_compatible_with = ["@platforms//os:linux"],
     deps = ["@openssl//:ssl"],
 )
